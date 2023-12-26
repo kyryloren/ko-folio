@@ -59,7 +59,11 @@ const Hero = () => {
           </TextWrapper>
           <ImageWrapper>
             <RevealImg className="reveal-hero-2" />
-            <CustomImage src="/kyrylo.webp" alt="Kyrylo Orlov" />
+            <CustomImage
+              src="/kyrylo.webp"
+              alt="Kyrylo Orlov"
+              blur={`L5EooR~m3Y5t0J%J%2Os0JRr%2_2`}
+            />
           </ImageWrapper>
         </CustomGridWrapper>
       </Container>

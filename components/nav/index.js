@@ -30,16 +30,22 @@ const Nav = () => {
           delay: 0.25,
         },
         0,
-      ).from(
-        gsap.utils.toArray('.reveal-nav-1'),
-        {
-          yPercent: 100,
-          duration: 2,
-          stagger: 0.02,
-          ease: 'power4.out',
-        },
-        0.5,
       )
+        .from(
+          gsap.utils.toArray('.reveal-nav-1'),
+          {
+            yPercent: 100,
+            duration: 2,
+            stagger: 0.02,
+            ease: 'power4.out',
+          },
+          0.5,
+        )
+        .from(
+          '.reveal-nav-2',
+          { opacity: 0, duration: 1, ease: 'power4.out' },
+          0.5,
+        )
     })
 
     return () => ctx.revert()

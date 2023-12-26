@@ -16,10 +16,10 @@ const projectMap = [
     link: '/astro-studios',
   },
   {
-    src: '/outerlabs.webp',
+    src: '/outer-labs/outerlabs-1.webp',
     blur: `LMC?r]%M00D%~qt74nM{4nWB?bof`,
     title: 'Outer Labs Studio',
-    link: '/outer-labs',
+    link: '/outer-labs-studio',
   },
   {
     src: '/sarahkhosla.webp',
