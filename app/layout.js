@@ -1,8 +1,9 @@
-import { StyledComponentsRegistry } from 'lib'
-import { Analytics } from '@vercel/analytics/react'
-import { gtwalsh } from 'styles'
-import { Cursor } from 'components'
+import { Suspense } from 'react'
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/react'
+import { StyledComponentsRegistry } from 'lib'
+import { Cursor } from 'components'
+import { gtwalsh } from 'styles'
 
 const title = 'Kyrylo Orlov | Creative designer and developer'
 const description = `Kyrylo Orlov is a designer and developer specializing in building elegant websites using modern web standards and technologies for brands that care about their image.`
@@ -96,7 +97,9 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning className={gtwalsh.variable}>
         <StyledComponentsRegistry>
           {children}
-          <Cursor />
+          <Suspense fallback={null}>
+            <Cursor />
+          </Suspense>
         </StyledComponentsRegistry>
         <Analytics />
       </body>

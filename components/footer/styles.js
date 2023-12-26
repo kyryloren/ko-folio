@@ -42,6 +42,7 @@ export const TitleWrapper = styled.div`
 
   .bottom {
     margin-top: -2vw;
+    ${media.thone`margin-top: 0;`}
   }
   .reveal-footer-1 {
     ${Display}
@@ -55,6 +56,12 @@ export const BottomWrapper = styled.div`
   width: 100%;
   bottom: 0;
   left: 0;
+
+  .hide {
+    ${media.phone`display: none;`}
+  }
+
+  ${media.thone`padding: 1.5rem 1.5rem;`}
 `
 export const LinkWrapper = styled.div`
   display: flex;

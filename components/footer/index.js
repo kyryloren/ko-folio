@@ -150,7 +150,7 @@ const Footer = () => {
                   to="/"
                   target="_blank"
                   $dark
-                  className="reveal-footer-3"
+                  className="reveal-footer-3 hide"
                   onClick={(e) => {
                     e.preventDefault()
                     lenis.scrollTo(0)
