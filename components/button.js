@@ -11,7 +11,7 @@ import styled, { css } from 'styled-components'
 import { useIsTouchDevice } from 'hooks'
 import { Normal, media } from 'styles'
 import { useIsomorphicLayoutEffect } from 'react-use'
-// import { animatePageOut } from 'lib'
+import { animatePageOut } from 'lib'
 
 const ButtonWrapper = styled.a`
   display: block;
@@ -164,28 +164,26 @@ const CustomButton = (props) => {
     })
   }, [])
 
-  //   const handleClick = (e) => {
-  //     e.preventDefault()
-  //     animatePageOut(href, router, pathName)
-  //   }
+  const handleClick = (e) => {
+    e.preventDefault()
+    animatePageOut(href, router, pathName)
+  }
 
   if (href) {
     return (
-      <div
-        //   onClick={handleClick}
-        className={className}
-      >
+      <div onClick={handleClick} className={className}>
         <ButtonWrapper
           href={href}
           ref={movingContainerRef}
           onMouseEnter={handleMouseEnter}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseExit}
-          //   onClick={onClick}
+          onClick={onClick}
           $reverse={$reverse}
           target={target === '_blank' ? '_blank' : undefined}
           rel={target === '_blank' ? 'noopener noreferrer' : undefined}
           role="button"
+          {...rest}
         >
           <StyledButton>
             <div ref={(el) => (line1 = el)}>{children}</div>
@@ -203,12 +201,13 @@ const CustomButton = (props) => {
       onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseExit}
-      //   onClick={onClick}
+      onClick={onClick}
       $reverse={$reverse}
       className={className}
       target={target === '_blank' ? '_blank' : undefined}
       rel={target === '_blank' ? 'noopener noreferrer' : undefined}
       role="button"
+      {...rest}
     >
       <StyledButton>
         <div ref={(el) => (line1 = el)}>{children}</div>

@@ -8,7 +8,7 @@ import { useRef } from 'react'
 
 const Philosophy = () => {
   let sectionTarget = useRef()
-  const text = `I believe that design and aesthetics intricately weave through every facet of our contemporary lives. To thrive in today's world, one must grasp the nuanced interplay between tangible and conceptual elements that shape individuals, objects, and experiences.`
+  const text = `I believe that design and aesthetics intricately weave through every facet of our contemporary lives. To thrive in today's world, one must grasp the nuanced interplay between the physical elements and theoretical ideas that shape individuals, objects, and experiences.`
 
   useIsomorphicLayoutEffect(() => {
     let ctx = gsap.context(() => {

@@ -1,12 +1,16 @@
 'use client'
+import { useIsTouchDevice } from 'hooks'
 import { useEffect, useRef } from 'react'
 import { Z_INDEX } from 'styles'
 import webGLFluidEnhanced from 'webgl-fluid-enhanced'
 
 const Cursor = () => {
   const canvasRef = useRef(null)
+  const touchDevice = useIsTouchDevice()
 
   useEffect(() => {
+    if (touchDevice) return null
+
     webGLFluidEnhanced.simulation(canvasRef.current, {
       PRESSURE: 0.2,
       SUNRAYS: false,
@@ -18,7 +22,7 @@ const Cursor = () => {
       COLOR_PALETTE: ['#212521'],
       BACK_COLOR: '#141714',
     })
-  }, [])
+  }, [touchDevice])
 
   return (
     <canvas

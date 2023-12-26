@@ -1,6 +1,6 @@
 'use client'
 
-import { Container, DisplayText, HugeText } from 'styles'
+import { Container } from 'styles'
 import {
   CustomGridWrapper,
   HeroWrapper,
@@ -50,11 +50,11 @@ const Hero = () => {
         <CustomGridWrapper>
           <TextWrapper>
             <div className="overflow">
-              <div className="reveal-hero-1">Kyrylo</div>
+              <div className="reveal-hero-1 enabled">Kyrylo</div>
             </div>
             <br />
             <div className="overflow">
-              <div className="reveal-hero-1">Orlov</div>
+              <div className="reveal-hero-1 enabled">Orlov</div>
             </div>
           </TextWrapper>
           <ImageWrapper>

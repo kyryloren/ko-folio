@@ -1,15 +1,21 @@
 'use client'
 
+import { useRef } from 'react'
 import { Container } from 'styles'
 import { CustomGridWrapper, HeaderWrapper, LinksWrapper } from './styles'
 import CustomLink from 'components/link'
 import { useIsomorphicLayoutEffect } from 'react-use'
 import gsap from 'gsap'
-import { useRef } from 'react'
 import CustomButton from 'components/button'
+import { useLenis } from '@studio-freight/react-lenis'
+import { usePathname, useRouter } from 'next/navigation'
+import { animatePageOut } from 'lib'
 
 const Nav = () => {
   const sectionRef = useRef()
+  const lenis = useLenis()
+  const router = useRouter()
+  const path = usePathname()
 
   useIsomorphicLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -46,7 +52,15 @@ const Nav = () => {
         <CustomGridWrapper>
           <div>
             <div className="overflow">
-              <CustomLink href="/" className="logo enabled">
+              <CustomLink
+                href="/"
+                className="logo enabled"
+                onClick={(e) => {
+                  e.preventDefault()
+                  if (path === '/') lenis.scrollTo(0)
+                  else animatePageOut('/', router, path)
+                }}
+              >
                 Kyrylo Orlov
               </CustomLink>
             </div>
@@ -63,7 +77,14 @@ const Nav = () => {
               </CustomLink>
             </div>
           </LinksWrapper>
-          <CustomButton className="reveal-nav-2" href="/contact">
+          <CustomButton
+            className="reveal-nav-2"
+            aria-label="Contact"
+            onClick={(e) => {
+              e.preventDefault()
+              lenis.scrollTo('bottom')
+            }}
+          >
             Avaiable for work
           </CustomButton>
         </CustomGridWrapper>
