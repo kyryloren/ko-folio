@@ -12,5 +12,6 @@ export const TextWrapper = styled.div`
   }
   .para-2 {
     margin-top: 2vw;
+    ${media.tablet`margin-top: 4rem;`}
   }
 `
