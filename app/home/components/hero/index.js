@@ -78,7 +78,7 @@ const Hero = () => {
       <Container>
         <ContentWrapper>
           <TopLine>
-            <div className="overflow">
+            <div className="overflow offset">
               <div className="reveal-hero-1 enabled">Designer</div>
             </div>
             <div className="overflow">

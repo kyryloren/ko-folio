@@ -20,6 +20,9 @@ export const ContentWrapper = styled.div`
   .reveal-hero-1 {
     ${Display}
   }
+  .offset {
+    margin-left: -0.61vw;
+  }
 `
 export const TopLine = styled.div`
   display: flex;
