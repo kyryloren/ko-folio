@@ -11,7 +11,7 @@ const image = `${
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
     : 'https://www.kyryloorlov.com'
-}/astrostudios-2.webp`
+}/astro-studios/astrostudios-2.webp`
 
 export const metadata = {
   title: title,

@@ -11,7 +11,7 @@ const image = `${
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
     : 'https://www.kyryloorlov.com'
-}/outerlabs-1.webp`
+}/outer-labs/outerlabs-1.webp`
 
 export const metadata = {
   title: title,
@@ -50,27 +50,27 @@ export default function Home() {
         images={[
           {
             src: '/outer-labs/outerlabs-2.webp',
-            alt: 'Astro Studios team section',
+            alt: 'Outer Labs Studio hero section',
             blur: `LbRMb$oft7Rk~qWBWBay9FofWBWC`,
           },
           {
             src: '/outer-labs/outerlabs-3.webp',
-            alt: 'Astro Studios team section',
+            alt: 'Outer Labs Studio footer section',
             blur: `L69sets;{Ioebbnmbbbb8_of_3of`,
           },
           {
             src: '/outer-labs/outerlabs-4.webp',
-            alt: 'Astro Studios team section',
+            alt: 'Outer Labs Studio about page hero section',
             blur: `L0QJfq?b03?u_3D%00Djt6D%004n`,
           },
           {
             src: '/outer-labs/outerlabs-5.webp',
-            alt: 'Astro Studios team section',
+            alt: 'Outer Labs Studio services section',
             blur: `L4RW0b-;~q?b00xut7%M00f6D%Rj`,
           },
           {
             src: '/outer-labs/outerlabs-6.webp',
-            alt: 'Astro Studios team section',
+            alt: 'Outer Labs Studio contact page',
             blur: `L4Ad7hxu00j[xuofoft700of~qt7`,
           },
         ]}

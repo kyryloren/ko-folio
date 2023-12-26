@@ -22,8 +22,8 @@ const projectMap = [
     link: '/outer-labs-studio',
   },
   {
-    src: '/sarahkhosla.webp',
-    blur: `L268Nt%M4TIBH@V[tktQ4URk_3xt`,
+    src: '/sarah-khosla/sarahkhosla-1.webp',
+    blur: `L15}y}-;00DjDPV@yCtk00Rk~q%K`,
     title: 'Sarah Khosla',
     link: '/sarah-khosla',
   },
