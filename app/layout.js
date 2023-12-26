@@ -2,7 +2,7 @@ import { StyledComponentsRegistry } from 'lib'
 import { Analytics } from '@vercel/analytics/react'
 import { gtwalsh } from 'styles'
 import { Cursor } from 'components'
-// import Script from 'next/script'
+import Script from 'next/script'
 
 const title = 'Kyrylo Orlov | Creative designer and developer'
 const description = `Kyrylo Orlov is a designer and developer specializing in building elegant websites using modern web standards and technologies for brands that care about their image.`
@@ -100,7 +100,7 @@ export default function RootLayout({ children }) {
         </StyledComponentsRegistry>
         <Analytics />
       </body>
-      {/* {process.env.NODE_ENV === 'production' && (
+      {process.env.NODE_ENV === 'production' && (
         <>
           <Script
             async
@@ -117,7 +117,7 @@ export default function RootLayout({ children }) {
             }}
           />
         </>
-      )} */}
+      )}
     </html>
   )
 }

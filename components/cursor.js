@@ -1,4 +1,5 @@
 'use client'
+
 import { useIsTouchDevice } from 'hooks'
 import { useEffect, useRef } from 'react'
 import { Z_INDEX } from 'styles'
@@ -10,19 +11,21 @@ const Cursor = () => {
 
   useEffect(() => {
     if (touchDevice) return null
-
-    webGLFluidEnhanced.simulation(canvasRef.current, {
-      PRESSURE: 0.2,
-      SUNRAYS: false,
-      START_SPLATS: 10,
-      SPLAT_AMOUNT: 1,
-      SPLAT_FORCE: 1000,
-      DENSITY_DISSIPATION: 3,
-      CURL: 0,
-      COLOR_PALETTE: ['#212521'],
-      BACK_COLOR: '#141714',
-    })
+    else
+      webGLFluidEnhanced.simulation(canvasRef.current, {
+        PRESSURE: 0.2,
+        SUNRAYS: false,
+        START_SPLATS: 10,
+        SPLAT_AMOUNT: 1,
+        SPLAT_FORCE: 1000,
+        DENSITY_DISSIPATION: 3,
+        CURL: 0,
+        COLOR_PALETTE: ['#212521'],
+        BACK_COLOR: '#141714',
+      })
   }, [touchDevice])
+
+  if (touchDevice) return null
 
   return (
     <canvas
