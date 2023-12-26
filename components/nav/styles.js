@@ -1,7 +1,7 @@
 'use client'
 
 import styled from 'styled-components'
-import { Z_INDEX } from 'styles'
+import { GridWrapper, Z_INDEX } from 'styles'
 
 export const HeaderWrapper = styled.header`
   position: fixed;
@@ -12,11 +12,15 @@ export const HeaderWrapper = styled.header`
   color: ${({ theme }) => `rgb(${theme.text})`};
   padding: 2vw 0;
   opacity: 0;
+  mix-blend-mode: difference;
 
   a {
     mix-blend-mode: difference;
     text-transform: uppercase;
   }
+`
+export const CustomGridWrapper = styled(GridWrapper)`
+  align-items: center;
 `
 export const LinksWrapper = styled.nav`
   display: flex;

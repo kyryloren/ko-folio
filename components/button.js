@@ -30,6 +30,7 @@ const ButtonWrapper = styled.a`
   cursor: pointer;
   pointer-events: all;
   overflow: hidden;
+  transform-origin: bottom left;
   --scale: 0;
 
   &:before {
@@ -40,13 +41,14 @@ const ButtonWrapper = styled.a`
     inset: 0px;
     border-radius: 35vw;
     z-index: -1;
+    mix-blend-mode: difference;
 
     transform: scale(var(--scale));
   }
 
   ${media.desktop`
-    padding: 0.5rem 2rem;
-    border-radius: 35px;
+  padding: 0.5rem 2rem;
+  border-radius: 35px;
   `}
 `
 const ButtonStyle = css`
@@ -58,6 +60,7 @@ const ButtonStyle = css`
   overflow: hidden;
   white-space: nowrap;
   pointer-events: all;
+  text-transform: uppercase;
   mix-blend-mode: difference;
 
   &:disabled {

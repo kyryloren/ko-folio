@@ -31,7 +31,16 @@ const CustomLink = (props) => {
   const line1 = useRef(null)
   const line2 = useRef(null)
   const tl = useRef()
-  const { href, to, target, children, $dark = false, onClick, ...rest } = props
+  const {
+    href,
+    to,
+    target,
+    children,
+    $dark = false,
+    onClick,
+    className,
+    ...rest
+  } = props
 
   useIsomorphicLayoutEffect(() => {
     tl.current = gsap
@@ -68,7 +77,8 @@ const CustomLink = (props) => {
   if (href) {
     return (
       <div
-      // onClick={handleClick}
+        className={className}
+        // onClick={handleClick}
       >
         <StyledLink
           href={href}
@@ -90,6 +100,7 @@ const CustomLink = (props) => {
       href={to}
       target={target === '_blank' ? '_blank' : undefined}
       rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+      className={className}
       {...linkAttributes}
     >
       <div ref={line1}>{children}</div>

@@ -43,6 +43,7 @@ export const CustomGridWrapper = styled(GridWrapper)`
 
   .reveal-hero-4 {
     color: ${({ theme }) => `rgb(${theme.gray})`};
+    text-transform: uppercase;
     ${Normal}
   }
 `

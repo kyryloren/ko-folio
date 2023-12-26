@@ -20,6 +20,7 @@ export const Medium = css`
   font-size: 2vw;
   font-weight: 400;
   line-height: 1.2;
+  letter-spacing: -0.1vw;
 
   ${media.desktop`font-size: 24px;`}
 `
@@ -30,7 +31,8 @@ export const MediumText = styled.p`
 export const Huge = css`
   font-size: 3.2vw; // 64px
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: -0.2vw;
 
   ${media.desktop`font-size: 4vw;`}
   ${media.thone`

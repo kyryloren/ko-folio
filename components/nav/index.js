@@ -1,7 +1,7 @@
 'use client'
 
-import { Container, GridWrapper } from 'styles'
-import { HeaderWrapper, LinksWrapper } from './styles'
+import { Container } from 'styles'
+import { CustomGridWrapper, HeaderWrapper, LinksWrapper } from './styles'
 import CustomLink from 'components/link'
 import { useIsomorphicLayoutEffect } from 'react-use'
 import gsap from 'gsap'
@@ -43,7 +43,7 @@ const Nav = () => {
   return (
     <HeaderWrapper ref={sectionRef}>
       <Container>
-        <GridWrapper>
+        <CustomGridWrapper>
           <div>
             <div className="overflow">
               <CustomLink href="/" className="logo enabled">
@@ -63,8 +63,10 @@ const Nav = () => {
               </CustomLink>
             </div>
           </LinksWrapper>
-          <CustomButton href="/contact">Avaiable for work</CustomButton>
-        </GridWrapper>
+          <CustomButton className="reveal-nav-2" href="/contact">
+            Avaiable for work
+          </CustomButton>
+        </CustomGridWrapper>
       </Container>
     </HeaderWrapper>
   )

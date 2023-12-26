@@ -1,9 +1,10 @@
 import { StyledComponentsRegistry } from 'lib'
 import { Analytics } from '@vercel/analytics/react'
 import { gtwalsh } from 'styles'
+import { Cursor } from 'components'
 // import Script from 'next/script'
 
-const title = 'Outer Labs | Websites, apps, & branding studio'
+const title = 'Kyrylo Orlov | Creative designer and developer'
 const description = `Kyrylo Orlov is a designer and developer specializing in building elegant websites using modern web standards and technologies for brands that care about their image.`
 
 export const metadata = {
@@ -93,7 +94,10 @@ export default function RootLayout({ children }) {
         {/* END FAVICON */}
       </head>
       <body suppressHydrationWarning className={gtwalsh.variable}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          {children}
+          <Cursor />
+        </StyledComponentsRegistry>
         <Analytics />
       </body>
       {/* {process.env.NODE_ENV === 'production' && (

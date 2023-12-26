@@ -1,7 +1,7 @@
 'use client'
 
 import { ThemeProvider } from 'styled-components'
-import { Cursor, Nav, Scrollbar } from 'components'
+import { Footer, Nav, Scrollbar } from 'components'
 import { useIsTouchDevice } from 'hooks'
 import { Lenis } from '@studio-freight/react-lenis'
 import Tempus from '@studio-freight/tempus'
@@ -40,9 +40,8 @@ export default function Template({ children }) {
           {/* <TransitionElement id="transition-element" /> */}
           <Nav />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </main>
-        <Cursor />
       </ThemeProvider>
     </Lenis>
   )

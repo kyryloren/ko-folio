@@ -31,7 +31,7 @@ const Hero = () => {
         gsap.utils.toArray('.reveal-hero-1'),
         {
           yPercent: 100,
-          duration: 2,
+          duration: 1.5,
           stagger: 0.2,
           delay: 0.2,
           ease: 'power4.out',
@@ -53,7 +53,7 @@ const Hero = () => {
           {
             yPercent: 100,
             duration: 2,
-            stagger: 0.05,
+            stagger: 0.02,
             ease: 'power4.out',
           },
           0.5,
