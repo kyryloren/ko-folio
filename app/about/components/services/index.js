@@ -56,7 +56,7 @@ const Services = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="hello@kyryloorlov.com"
+            href="mailto:hello@kyryloorlov.com"
             className="reveal-services-1 enabled"
           >
             let's talk

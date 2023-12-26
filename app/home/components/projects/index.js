@@ -1,23 +1,39 @@
 'use client'
 
 import { useRef } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 import { CustomImage, Information } from 'components'
 import { OverlayInfo, ProjectWrapper, ProjectsArray } from './styles'
 import gsap from 'gsap'
-import { Flip } from 'gsap/dist/Flip'
 import { NormalText } from 'styles'
-
-gsap.registerPlugin(Flip)
+import { animatePageOut } from 'lib'
 
 const projectMap = [
-  { src: '/astrostudios.webp', title: 'Astro Studios', link: '/astro-studios' },
-  { src: '/outerlabs.webp', title: 'Outer Labs Studio', link: '/outer-labs' },
-  { src: '/sarahkhosla.webp', title: 'Sarah Khosla', link: '/sarah-khosla' },
+  {
+    src: '/astro-studios/astrostudios-1.webp',
+    blur: `LHCP-N0K00~q%NV@D%%M4nxu-;IA`,
+    title: 'Astro Studios',
+    link: '/astro-studios',
+  },
+  {
+    src: '/outerlabs.webp',
+    blur: `LMC?r]%M00D%~qt74nM{4nWB?bof`,
+    title: 'Outer Labs Studio',
+    link: '/outer-labs',
+  },
+  {
+    src: '/sarahkhosla.webp',
+    blur: `L268Nt%M4TIBH@V[tktQ4URk_3xt`,
+    title: 'Sarah Khosla',
+    link: '/sarah-khosla',
+  },
 ]
 
 const Projects = () => {
   const projectsRef = useRef()
   const sectionTarget = useRef()
+  const router = useRouter()
+  const pathname = usePathname()
 
   const handleHovering = (hoveredNum) => {
     for (let i = 1; i <= 3; i++) {
@@ -41,11 +57,19 @@ const Projects = () => {
             onMouseEnter={() => handleHovering(index + 1)}
             onMouseLeave={handleLeave}
             className="reveal-project"
+            onClick={(e) => {
+              e.preventDefault()
+              animatePageOut(project.link, router, pathname)
+            }}
           >
             <OverlayInfo>
               <NormalText>{project.title}</NormalText>
             </OverlayInfo>
-            <CustomImage src={project.src} alt={project.title} />
+            <CustomImage
+              src={project.src}
+              alt={project.title}
+              blur={project.blur}
+            />
           </ProjectWrapper>
         ))}
       </ProjectsArray>

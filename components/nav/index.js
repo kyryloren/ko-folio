@@ -3,13 +3,12 @@
 import { useRef } from 'react'
 import { Container } from 'styles'
 import { CustomGridWrapper, HeaderWrapper, LinksWrapper } from './styles'
-import CustomLink from 'components/link'
 import { useIsomorphicLayoutEffect } from 'react-use'
 import gsap from 'gsap'
-import CustomButton from 'components/button'
 import { useLenis } from '@studio-freight/react-lenis'
 import { usePathname, useRouter } from 'next/navigation'
 import { animatePageOut } from 'lib'
+import { CustomLink, CustomButton } from 'components'
 
 const Nav = () => {
   const sectionRef = useRef()
