@@ -1,10 +1,11 @@
 'use client'
 
 import styled from 'styled-components'
-import { Huge, Normal } from 'styles'
+import { Huge, Normal, media } from 'styles'
 
 export const TextWrapper = styled.div`
   grid-column: 2 / span 3;
+  ${media.tablet`grid-column: 1 / span 3;`}
 
   .reveal-services-1 {
     ${Huge}
@@ -19,6 +20,8 @@ export const ServicesCols = styled.div`
   display: flex;
   gap: 6vw;
   padding-top: 4vw;
+
+  ${media.tablet`grid-column: 1 / span 3;`}
 `
 export const Col = styled.div`
   display: flex;

@@ -14,6 +14,7 @@ import {
 } from './styles'
 import gsap from 'gsap'
 import CustomLink from 'components/link'
+import Div100vh from 'react-div-100vh'
 
 const Footer = () => {
   const sectionTarget = useRef()
@@ -76,91 +77,93 @@ const Footer = () => {
   }, [])
 
   return (
-    <StyledFooter>
-      <InnerContent ref={sectionTarget}>
-        <Container>
-          <ContentWrapper>
-            <TitleWrapper>
-              <div className="overflow">
-                <div className="reveal-footer-1 enabled">Let's&nbsp;</div>
-              </div>
-              <div className="overflow">
-                <div className="reveal-footer-1 enabled">work</div>
-              </div>
-              <br />
-              <div className="overflow bottom">
-                <div className="reveal-footer-1 enabled">together</div>
-              </div>
-            </TitleWrapper>
-            <CustomLink
-              className="reveal-footer-2"
-              href="mailto@hello@kyryloorlov.com"
-              target="_blank"
-            >
-              hello@kyryloorlov.com
-            </CustomLink>
-          </ContentWrapper>
-          <BottomWrapper>
-            <LinkWrapper>
-              <div className="overflow">
-                <CustomLink
-                  to="https://instagram.com/kyryloren"
-                  target="_blank"
-                  $dark
-                  className="reveal-footer-3"
-                >
-                  ING
-                </CustomLink>
-              </div>
-              <div className="overflow">
-                <CustomLink
-                  to="https://www.linkedin.com/in/kyryloren"
-                  target="_blank"
-                  $dark
-                  className="reveal-footer-3"
-                >
-                  LIN
-                </CustomLink>
-              </div>
-              <div className="overflow">
-                <CustomLink
-                  to="https://github.com/kyryloren"
-                  target="_blank"
-                  $dark
-                  className="reveal-footer-3"
-                >
-                  GIT
-                </CustomLink>
-              </div>
-              <div className="overflow">
-                <CustomLink
-                  to="https://dribbble.com/kyryloren"
-                  target="_blank"
-                  $dark
-                  className="reveal-footer-3"
-                >
-                  DRB
-                </CustomLink>
-              </div>
-            </LinkWrapper>
-            <div className="overflow">
+    <Div100vh>
+      <StyledFooter>
+        <InnerContent ref={sectionTarget}>
+          <Container>
+            <ContentWrapper>
+              <TitleWrapper>
+                <div className="overflow">
+                  <div className="reveal-footer-1 enabled">Let's&nbsp;</div>
+                </div>
+                <div className="overflow">
+                  <div className="reveal-footer-1 enabled">work</div>
+                </div>
+                <br />
+                <div className="overflow bottom">
+                  <div className="reveal-footer-1 enabled">together</div>
+                </div>
+              </TitleWrapper>
               <CustomLink
-                to="/"
+                className="reveal-footer-2"
+                href="mailto@hello@kyryloorlov.com"
                 target="_blank"
-                $dark
-                className="reveal-footer-3"
-                onClick={(e) => {
-                  e.preventDefault()
-                  lenis.scrollTo(0)
-                }}
               >
-                BACK TO TOP
+                hello@kyryloorlov.com
               </CustomLink>
-            </div>
-          </BottomWrapper>
-        </Container>
-      </InnerContent>
-    </StyledFooter>
+            </ContentWrapper>
+            <BottomWrapper>
+              <LinkWrapper>
+                <div className="overflow">
+                  <CustomLink
+                    to="https://instagram.com/kyryloren"
+                    target="_blank"
+                    $dark
+                    className="reveal-footer-3"
+                  >
+                    ING
+                  </CustomLink>
+                </div>
+                <div className="overflow">
+                  <CustomLink
+                    to="https://www.linkedin.com/in/kyryloren"
+                    target="_blank"
+                    $dark
+                    className="reveal-footer-3"
+                  >
+                    LIN
+                  </CustomLink>
+                </div>
+                <div className="overflow">
+                  <CustomLink
+                    to="https://github.com/kyryloren"
+                    target="_blank"
+                    $dark
+                    className="reveal-footer-3"
+                  >
+                    GIT
+                  </CustomLink>
+                </div>
+                <div className="overflow">
+                  <CustomLink
+                    to="https://dribbble.com/kyryloren"
+                    target="_blank"
+                    $dark
+                    className="reveal-footer-3"
+                  >
+                    DRB
+                  </CustomLink>
+                </div>
+              </LinkWrapper>
+              <div className="overflow">
+                <CustomLink
+                  to="/"
+                  target="_blank"
+                  $dark
+                  className="reveal-footer-3"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    lenis.scrollTo(0)
+                  }}
+                >
+                  BACK TO TOP
+                </CustomLink>
+              </div>
+            </BottomWrapper>
+          </Container>
+        </InnerContent>
+      </StyledFooter>
+    </Div100vh>
   )
 }
 

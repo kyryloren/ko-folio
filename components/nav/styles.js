@@ -1,7 +1,7 @@
 'use client'
 
 import styled from 'styled-components'
-import { GridWrapper, Z_INDEX } from 'styles'
+import { GridWrapper, Z_INDEX, media } from 'styles'
 
 export const HeaderWrapper = styled.header`
   position: fixed;
@@ -14,16 +14,25 @@ export const HeaderWrapper = styled.header`
   opacity: 0;
   mix-blend-mode: difference;
 
+  ${media.tablet`padding: 1.5rem 0;`}
+
   a {
     mix-blend-mode: difference;
     text-transform: uppercase;
   }
+  .reveal-nav-2 {
+    ${media.tablet`display: none;`}
+  }
 `
 export const CustomGridWrapper = styled(GridWrapper)`
   align-items: center;
+
+  ${media.tablet`grid-template-columns: 1fr auto;`}
 `
 export const LinksWrapper = styled.nav`
   display: flex;
   gap: 2vw;
   align-items: center;
+
+  ${media.tablet`gap: 1rem;`}
 `

@@ -9,8 +9,8 @@ export const Normal = css`
   line-height: 1.3;
   letter-spacing: -0.05vw;
 
-  ${media.desktop`font-size: 16px;`}
-  ${media.thone`font-size: 18px;`}
+  ${media.desktop`font-size: 1.5vw;`}
+  ${media.tablet`font-size: 18px;`}
 `
 export const NormalText = styled.p`
   ${Normal}

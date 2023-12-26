@@ -1,9 +1,8 @@
 'use client'
 
 import { useRef } from 'react'
-import { Information } from 'components'
+import { CustomButton, Information } from 'components'
 import { ContentTextWrapper, TitleTextWrapper } from './styles'
-import CustomButton from 'components/button'
 import { useIsomorphicLayoutEffect } from 'react-use'
 import gsap from 'gsap'
 

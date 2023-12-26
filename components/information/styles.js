@@ -1,13 +1,15 @@
 'use client'
 
 import styled from 'styled-components'
-import { GridWrapper, Z_INDEX } from 'styles'
+import { GridWrapper, Z_INDEX, media } from 'styles'
 
 export const InformationSectionWrapper = styled.section`
   position: relative;
   width: 100%;
   z-index: ${Z_INDEX.information_section};
   padding: 8vw 0;
+
+  ${media.tablet`padding: 4rem 0;`}
 `
 export const TitleWrapper = styled.div`
   display: flex;
@@ -30,4 +32,6 @@ export const Line = styled.div`
   mix-blend-mode: difference;
   transform-origin: left;
   will-change: transform;
+
+  ${media.tablet`margin: 2rem 0 4rem;`}
 `

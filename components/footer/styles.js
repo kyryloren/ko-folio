@@ -1,12 +1,12 @@
 'use client'
 
 import styled from 'styled-components'
-import { Display, Medium, Z_INDEX } from 'styles'
+import { Display, Medium, Z_INDEX, media } from 'styles'
 
 export const StyledFooter = styled.footer`
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: inherit;
   z-index: ${Z_INDEX.footer};
 `
 export const InnerContent = styled.div`
@@ -38,6 +38,8 @@ export const TitleWrapper = styled.div`
   text-align: center;
   padding-bottom: 4vw;
 
+  ${media.thone`padding-bottom: 4rem;`}
+
   .bottom {
     margin-top: -2vw;
   }
@@ -57,4 +59,6 @@ export const BottomWrapper = styled.div`
 export const LinkWrapper = styled.div`
   display: flex;
   gap: 2vw;
+
+  ${media.thone`gap: 1rem;`}
 `

@@ -9,9 +9,9 @@ export const Grid = css`
   grid-gap: 2vw;
   grid-template-columns: 35% 1fr auto;
 
-  ${media.thone`
+  ${media.tablet`
     grid-gap: 2rem;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto 1fr auto;
   `}
 `
 export const GridWrapper = styled.div`

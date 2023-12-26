@@ -1,14 +1,14 @@
 'use client'
 
 import styled from 'styled-components'
-import { Display, GridWrapper, Z_INDEX } from 'styles'
+import { Display, GridWrapper, Z_INDEX, media } from 'styles'
 
 export const HeroWrapper = styled.section`
   position: relative;
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: inherit;
   opacity: 0;
   z-index: ${Z_INDEX.hero};
 `
@@ -25,6 +25,13 @@ export const ImageWrapper = styled.div`
   height: 80svh;
   min-height: 40vw;
   border-radius: 2vw;
+
+  ${media.desktop`max-width: 60%;`}
+  ${media.tablet`grid-column: 1 / span 3;`}
+  ${media.thone`
+    max-width: 100%;
+    height: 60svh;
+  `}
 `
 export const RevealImg = styled.div`
   position: relative;
@@ -42,6 +49,19 @@ export const TextWrapper = styled.div`
   transform: translateY(-50%);
   margin-left: -40%;
   z-index: ${Z_INDEX.hero + 1};
+
+  ${media.tablet`
+    margin-left: 0;
+    right: 10%;
+  `}
+  ${media.thone`
+    position: relative;
+    grid-column: 1 / span 3;
+    margin-left: 0;
+    right: 0;
+    transform: unset;
+    text-align: center;
+  `}
 
   .reveal-hero-1 {
     ${Display}

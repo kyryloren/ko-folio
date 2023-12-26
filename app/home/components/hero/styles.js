@@ -1,12 +1,12 @@
 'use client'
 
 import styled from 'styled-components'
-import { Display, GridWrapper, Normal, Z_INDEX } from 'styles'
+import { Display, GridWrapper, Normal, Z_INDEX, media } from 'styles'
 
 export const SectionWrapper = styled.section`
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: inherit;
   opacity: 0;
   z-index: ${Z_INDEX.hero};
 `
@@ -16,6 +16,8 @@ export const ContentWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  ${media.thone`height: 70svh;`}
 
   .reveal-hero-1 {
     ${Display}
@@ -27,11 +29,15 @@ export const ContentWrapper = styled.div`
 export const TopLine = styled.div`
   display: flex;
   justify-content: space-between;
+
+  ${media.phablet`flex-direction: column;`}
 `
 export const BottomLine = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-top: -2vw;
+
+  ${media.phablet`justify-content: flex-start;`}
 `
 
 export const FooterWrapper = styled.div`
@@ -44,6 +50,12 @@ export const CustomGridWrapper = styled(GridWrapper)`
   align-items: flex-end;
   padding-bottom: 1.5vw;
 
+  ${media.thone`
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding-bottom: 1rem;
+  `}
+
   .reveal-hero-4 {
     color: ${({ theme }) => `rgb(${theme.gray})`};
     text-transform: uppercase;
@@ -53,8 +65,20 @@ export const CustomGridWrapper = styled(GridWrapper)`
 export const LinkWrapper = styled.div`
   display: flex;
   gap: 2vw;
+
+  ${media.thone`gap: 1rem;`}
 `
 export const ParagraphWrapper = styled.div`
+  grid-column: 2;
+  &.hide {
+    ${media.thone`display: none;`}
+  }
+
+  &:not(.hide) {
+    display: none;
+    ${media.thone`display: block;`}
+  }
+
   .reveal-hero-3 {
     ${Normal}
     text-transform: uppercase;

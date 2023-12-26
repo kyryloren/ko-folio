@@ -1,7 +1,7 @@
 'use client'
 
 import styled from 'styled-components'
-import { Z_INDEX } from 'styles'
+import { Z_INDEX, media } from 'styles'
 
 export const ProjectsArray = styled.div`
   grid-column: 1 / span 3;
@@ -11,6 +11,12 @@ export const ProjectsArray = styled.div`
   --fr-value-3: 1fr;
   grid-template-columns: var(--fr-value-1) var(--fr-value-2) var(--fr-value-3);
   gap: 2vw;
+
+  ${media.tablet`
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+  `}
 `
 export const ProjectWrapper = styled.a`
   position: relative;
