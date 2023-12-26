@@ -13,7 +13,7 @@ export const TitleTextWrapper = styled.div`
 `
 export const ContentTextWrapper = styled.div`
   grid-column: 2 / span 3;
-  max-width: 39%;
+  max-width: 41%;
   margin-top: 4vw;
 
   .reveal-about-2 {
