@@ -22,6 +22,7 @@ export const ProjectWrapper = styled.a`
   text-decoration: none;
   transform-origin: top center;
   color: ${({ theme }) => `rgb(${theme.text})`};
+  cursor: pointer;
 `
 export const OverlayInfo = styled.div`
   position: absolute;

@@ -12,7 +12,7 @@ gsap.registerPlugin(Flip)
 const projectMap = [
   { src: '/astrostudios.webp', title: 'Astro Studios', link: '/astro-studios' },
   { src: '/outerlabs.webp', title: 'Outer Labs Studio', link: '/outer-labs' },
-  { src: '/outerlabs.webp', title: 'Sarah Khosla', link: '/sarah-khosla' },
+  { src: '/sarahkhosla.webp', title: 'Sarah Khosla', link: '/sarah-khosla' },
 ]
 
 const Projects = () => {
@@ -33,7 +33,7 @@ const Projects = () => {
 
   return (
     <Information ref={sectionTarget} title="Selected work (3)" subtitle="2023">
-      <ProjectsArray ref={projectsRef}>
+      <ProjectsArray ref={projectsRef} id="projects">
         {projectMap.map((project, index) => (
           <ProjectWrapper
             key={index}
