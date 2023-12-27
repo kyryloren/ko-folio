@@ -66,5 +66,6 @@ export const TextWrapper = styled.div`
   .reveal-hero-1 {
     ${Display}
     text-transform: uppercase;
+    padding-right: 1vw;
   }
 `

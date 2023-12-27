@@ -26,20 +26,32 @@ const Hero = () => {
         gsap.utils.toArray('.reveal-hero-1'),
         {
           yPercent: 100,
-          duration: 1.5,
+          duration: 2,
           stagger: 0.2,
           ease: 'power4.out',
+          delay: 0.8,
         },
         0,
-      ).to(
-        '.reveal-hero-2',
-        {
-          scaleY: 0,
-          duration: 2,
-          ease: 'power4.out',
-        },
-        0.5,
       )
+        .from(
+          gsap.utils.toArray('.text-wrapper'),
+          {
+            xPercent: 30,
+            duration: 2,
+            stagger: 0.2,
+            ease: 'power4.inOut',
+          },
+          1.3,
+        )
+        .to(
+          '.reveal-hero-2',
+          {
+            scaleY: 0,
+            duration: 2,
+            ease: 'power4.inOut',
+          },
+          1.7,
+        )
     })
 
     return () => ctx.revert()
@@ -51,18 +63,18 @@ const Hero = () => {
         <Container>
           <CustomGridWrapper>
             <TextWrapper>
-              <div className="overflow">
+              <div className="overflow text-wrapper">
                 <div className="reveal-hero-1 enabled">Kyrylo</div>
               </div>
               <br />
-              <div className="overflow">
+              <div className="overflow text-wrapper">
                 <div className="reveal-hero-1 enabled">Orlov</div>
               </div>
             </TextWrapper>
             <ImageWrapper>
               <RevealImg className="reveal-hero-2" />
               <CustomImage
-                src="/kyrylo.webp"
+                src="/kyryloorlov.webp"
                 alt="Kyrylo Orlov"
                 blur={`L5EooR~m3Y5t0J%J%2Os0JRr%2_2`}
               />
