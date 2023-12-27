@@ -15,9 +15,9 @@ const Cursor = () => {
       webGLFluidEnhanced.simulation(canvasRef.current, {
         PRESSURE: 0.2,
         SUNRAYS: false,
-        START_SPLATS: 10,
-        SPLAT_AMOUNT: 1,
-        SPLAT_FORCE: 1000,
+        START_SPLATS: 0,
+        SPLAT_AMOUNT: 10,
+        SPLAT_FORCE: 1500,
         DENSITY_DISSIPATION: 3,
         CURL: 0,
         COLOR_PALETTE: ['#212521'],

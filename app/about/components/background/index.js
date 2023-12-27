@@ -16,7 +16,7 @@ const Background = () => {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionTarget.current,
-          start: 'top bottom',
+          start: 'top bottom-=10%',
           toggleActions: 'play none none reset',
         },
       })

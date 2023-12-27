@@ -20,7 +20,7 @@ const Information = forwardRef(function ({ title, subtitle, children }, ref) {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: ref.current,
-          start: 'top bottom',
+          start: 'top bottom-=10%',
           toggleActions: 'play none none reset',
         },
       })
