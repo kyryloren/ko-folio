@@ -45,7 +45,7 @@ export default function Home() {
           paragraphs: [
             `This version of Sarah's online portfolio, designed by her and developed by me, showcases her professional work through a straightforward yet impactful design. Utilizing NextJS, GSAP, and Strapi, I crafted both frontend and backend elements to ensure a swift and user-friendly experience, complemented by an aesthetically pleasing interface. The site is hosted on Vercel and DigitalOcean for optimal performance.`,
           ],
-          live: 'https://outerlabs.studio',
+          live: 'https://sarahkhosla.com',
         }}
         images={[
           {
