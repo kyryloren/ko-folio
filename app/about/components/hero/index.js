@@ -1,6 +1,6 @@
 'use client'
 
-import { Container } from 'styles'
+import { Container, sizes } from 'styles'
 import {
   CustomGridWrapper,
   HeroWrapper,
@@ -9,13 +9,14 @@ import {
   TextWrapper,
 } from './styles'
 import { CustomImage } from 'components'
-import { useIsomorphicLayoutEffect } from 'react-use'
+import { useIsomorphicLayoutEffect, useWindowSize } from 'react-use'
 import gsap from 'gsap'
 import { useRef } from 'react'
 import Div100vh from 'react-div-100vh'
 
 const Hero = () => {
   const sectionTarget = useRef()
+  const { width } = useWindowSize()
 
   useIsomorphicLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -32,8 +33,18 @@ const Hero = () => {
           delay: 0.8,
         },
         0,
+      ).to(
+        '.reveal-hero-2',
+        {
+          scaleY: 0,
+          duration: 2,
+          ease: 'power4.inOut',
+        },
+        1.7,
       )
-        .from(
+
+      if (width > sizes.thone) {
+        tl.from(
           gsap.utils.toArray('.text-wrapper'),
           {
             xPercent: 30,
@@ -43,19 +54,11 @@ const Hero = () => {
           },
           1.3,
         )
-        .to(
-          '.reveal-hero-2',
-          {
-            scaleY: 0,
-            duration: 2,
-            ease: 'power4.inOut',
-          },
-          1.7,
-        )
+      }
     })
 
     return () => ctx.revert()
-  }, [])
+  }, [width])
 
   return (
     <Div100vh>

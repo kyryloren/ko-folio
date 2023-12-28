@@ -21,12 +21,12 @@ export const ImageWrapper = styled.div`
   display: flex;
   align-self: center;
   width: 100%;
-  max-width: 50%;
+  max-width: 35vmax;
   height: 80svh;
   min-height: 40vw;
   border-radius: 2vw;
 
-  ${media.desktop`max-width: 60%;`}
+  ${media.desktop`max-width: 40vmax;`}
   ${media.tablet`grid-column: 1 / span 3;`}
   ${media.thone`
     max-width: 100%;
