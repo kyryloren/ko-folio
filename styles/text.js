@@ -7,7 +7,6 @@ export const Normal = css`
   font-size: 1vw;
   font-weight: 400;
   line-height: 1.3;
-  letter-spacing: -0.05vw;
 
   ${media.desktop`font-size: 1.5vw;`}
   ${media.tablet`font-size: 18px;`}
@@ -20,7 +19,6 @@ export const Medium = css`
   font-size: 2vw;
   font-weight: 400;
   line-height: 1.2;
-  letter-spacing: -0.1vw;
 
   ${media.desktop`font-size: 24px;`}
 `
@@ -32,7 +30,6 @@ export const Huge = css`
   font-size: 3.2vw; // 64px
   font-weight: 400;
   line-height: 1.1;
-  letter-spacing: -0.2vw;
 
   ${media.desktop`font-size: 4vw;`}
   ${media.thone`
@@ -47,7 +44,6 @@ export const Display = css`
   font-size: 9vw; // 180px
   font-weight: 400;
   line-height: 1.1;
-  letter-spacing: -0.4vw;
 
   ${media.desktop`
     font-size: 10vw;

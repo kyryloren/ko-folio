@@ -98,7 +98,7 @@ const Nav = () => {
               lenis.scrollTo('bottom')
             }}
           >
-            Avaiable for work
+            Available for work
           </CustomButton>
         </CustomGridWrapper>
       </Container>
